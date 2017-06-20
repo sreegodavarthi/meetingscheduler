@@ -3,8 +3,8 @@ myApp.controller('ReportController', ['$scope', 'Authentication', '$http',
         $scope.isDataExists = false;
 
         // $scope.getReport = function () {
-        var url = 'http://demo1.infobuild.in:8080/ibi_apps/run.bip?BIP_REQUEST_TYPE=BIP_RUN&BIP_folder=IBFS%253A%252FWFC%252FRepository%252Fgoogle&BIP_item=CarSalesReport.fex&windowHandle=476704&IBI_random=145.91456346994437';
-        //var url = '../views/data.json';
+        //var url = 'http://demo1.infobuild.in:8080/ibi_apps/run.bip?BIP_REQUEST_TYPE=BIP_RUN&BIP_folder=IBFS%253A%252FWFC%252FRepository%252Fgoogle&BIP_item=CarSalesReport.fex&windowHandle=476704&IBI_random=145.91456346994437';
+        var url = '../views/data.json';
         $http({
             method: 'GET',
             url: url
