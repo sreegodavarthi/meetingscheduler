@@ -800,8 +800,9 @@ input.ng-valid.ng-touched {
 .carsales {
     text-align: center;
     margin-top: 0px;
+    color: #1B7998;
 }
 
 .tableheadcar {
-    font-weight: bold;
+    font-weight: 700;
 }

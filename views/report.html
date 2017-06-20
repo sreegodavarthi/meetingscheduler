@@ -1,16 +1,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<section style="padding-top:8px;">
+<section style="padding-top:0px;">
     <div class="carsales">
         <h2>Car Sales Report</h2>
     </div>
 
     <table class="table" ng-if="isDataExists">
         <thead class="tableheadcar">
-            <th>CAR</th>
-            <th>MODEL</th>
-            <th>SALES</th>
-            <th>DEALER_COST</th>
-            <th>RETAIL_COST</th>
+            <th class="tableheadcar">CAR</th>
+            <th class="tableheadcar">MODEL</th>
+            <th class="tableheadcar">SALES</th>
+            <th class="tableheadcar">DEALER_COST</th>
+            <th class="tableheadcar">RETAIL_COST</th>
         </thead>
         <tbody>
             <tr ng-repeat="report in reportData">
