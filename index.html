@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <base href="/" />
     <title>Application Powered By WebFocus For Scheduling Meetings</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="google-site-verification" content="GqSjqBJigDj0_-jvZBm_PlLnoiLtBxC8q2gdnmOz-K8" />
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="Description" content="A data driven app for scheduling meetings and get reports dynamically generated using WebFocus" />
+    <meta name="description" content="A data driven app for scheduling meetings and get reports dynamically generated using WebFocus" />
+    <!--<meta property="og:title" content="Application Powered By WebFocus For Scheduling Meetings" />-->
+    <!--<meta itemprop="description" content="Application wide description for Schema.org (Google+ uses this)">-->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -32,6 +35,7 @@
         };
         firebase.initializeApp(config);
     </script>
+    <script src="node_modules/angular-update-meta/dist/update-meta.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/services/authentication.js"></script>
@@ -51,7 +55,7 @@
             <!--<a href="http://demo1.infobuild.in:8080/ibi_apps/run.bip?BIP_REQUEST_TYPE=BIP_RUN&BIP_folder=IBFS%253A%252FWFC%252FRepository%252Fgoogle&BIP_item=carsales.fex&windowHandle=149239&IBI_random=2640.4634756068735
 ">Get Report</a>-->
             <span class="userinfo">Hi {{currentUser.firstname}}</span>
-            <a ng-href="#/login" ng-click="logout()">logout</a>
+            <a ng-href="login" ng-click="logout()">logout</a>
         </div>
         <main class="cf" ng-view>
         </main>

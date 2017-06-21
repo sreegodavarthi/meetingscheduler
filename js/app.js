@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'firebase']);
+var myApp = angular.module('myApp', ['ngRoute', 'firebase', 'updateMeta']);
 
 myApp.run(['$rootScope', '$location', function($rootScope, $location) {
     $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
@@ -9,8 +9,14 @@ myApp.run(['$rootScope', '$location', function($rootScope, $location) {
     }); //$routeChangeError
 }]); //run
 
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
+
     $routeProvider.
+    when('/', {
+        templateUrl: 'views/login.html',
+        controller: 'RegistrationController'
+    }).
     when('/login', {
         templateUrl: 'views/login.html',
         controller: 'RegistrationController'
@@ -42,6 +48,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
         } //resolve
     }).
     otherwise({
-        redirectTo: '/login'
+        redirectTo: '/'
     });
+
+    $locationProvider.html5Mode(true);
 }]);
