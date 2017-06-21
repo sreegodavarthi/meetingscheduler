@@ -14,6 +14,6 @@ app.listen(process.env.PORT || 7878, function() {
 });
 
 
-app.get('/', function(req, resp) {
+app.get('/*', function(req, resp) {
     resp.sendFile(__dirname + '/index.html');
 })
